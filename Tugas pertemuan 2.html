@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absensi dan Form Mahasiswa</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 20px;
+        }
+
+        .box-absensi {
+            border: 2px solid #000;
+            padding: 20px;
+            width: fit-content;
+            text-align: center;
+            margin-bottom: 40px; 
+        }
+
+        .box-absensi h2 {
+            font-size: 22px;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .tbl-absensi {
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+
+        .tbl-absensi th, 
+        .tbl-absensi td {
+            border: 1px solid #777;
+            padding: 4px 8px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .tbl-absensi td.nama {
+            text-align: left;
+        }
+
+        .form-container {
+            width: 600px;
+        }
+
+        .form-container h1 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        fieldset {
+            border: 1px solid #777;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        legend {
+            padding: 0 5px;
+            font-size: 15px;
+        }
+
+        .tbl-form {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .tbl-form td {
+            border: none;
+            padding: 4px 0;
+            vertical-align: top;
+            font-size: 14px;
+        }
+
+        .tbl-form td.label {
+            width: 160px;
+        }
+
+        .tbl-form td.colon {
+            width: 20px;
+        }
+
+        input[type="text"], select, textarea {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 14px;
+            border: 1px solid #999;
+            padding: 2px 4px;
+        }
+
+        input[type="text"] {
+            width: 200px;
+        }
+
+        textarea {
+            width: 220px;
+            height: 70px;
+        }
+
+        .checkbox-group {
+            display: inline-block;
+            margin-right: 10px;
+            white-space: nowrap;
+        }
+
+        .buttons {
+            margin-top: 10px;
+        }
+
+        .buttons input {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            padding: 3px 10px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box-absensi">
+        <h2>Absensi Mahasiswa Teknik Informatika</h2>
+
+        <table class="tbl-absensi">
+            <thead>
+                <tr>
+                    <th rowspan="3">NO</th>
+                    <th rowspan="3">NPM</th>
+                    <th rowspan="3">NAMA</th>
+                    <th colspan="7">PERTEMUAN</th>
+                </tr>
+                <tr>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
+                    <th>6</th>
+                    <th>7</th>
+                </tr>
+                <tr>
+                    <td>9-Feb</td>
+                    <td>16-Feb</td>
+                    <td>23-Feb</td>
+                    <td>2-Mar</td>
+                    <td>9-Mar</td>
+                    <td>16-Mar</td>
+                    <td>23-Mar</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>5520125080</td>
+                    <td class="nama">Muhammad Shandi Suhermawan</td>
+                    <td>v</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>55201293843</td>
+                    <td class="nama">ShannV160</td>
+                    <td>v</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>5520129384</td>
+                    <td class="nama">ShannK2s</td>
+                    <td>v</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="form-container">
+        <h1>Form Mahasiswa</h1>
+
+        <form action="#" method="post">
+
+            <fieldset>
+                <legend>Data Mahasiswa</legend>
+                <table class="tbl-form">
+                    <tr>
+                        <td class="label">Nama</td>
+                        <td class="colon">:</td>
+                        <td><input type="text" name="nama"></td>
+                    </tr>
+                    <tr>
+                        <td class="label">NPM</td>
+                        <td class="colon">:</td>
+                        <td><input type="text" name="npm"></td>
+                    </tr>
+                    <tr>
+                        <td class="label">Kelas</td>
+                        <td class="colon">:</td>
+                        <td>
+                            <select name="kelas">
+                                <option value="">-</option>
+                                <option value="IF A">IF A</option>
+                                <option value="IF B">IF B</option>
+                                <option value="IF C">IF C</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label">Jenis Kelamin</td>
+                        <td class="colon">:</td>
+                        <td>
+                            <label><input type="radio" name="jk" value="Pria"> Pria</label>
+                            <label><input type="radio" name="jk" value="Wanita"> Wanita</label>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <fieldset>
+                <legend>Tempat Tinggal Mahasiswa</legend>
+                <table class="tbl-form">
+                    <tr>
+                        <td class="label">Alamat</td>
+                        <td class="colon">:</td>
+                        <td><textarea name="alamat"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td class="label">Kecamatan</td>
+                        <td class="colon">:</td>
+                        <td><input type="text" name="kecamatan"></td>
+                    </tr>
+                    <tr>
+                        <td class="label">Kabupaten/Kotamadya</td>
+                        <td class="colon">:</td>
+                        <td><input type="text" name="kabupaten"></td>
+                    </tr>
+                    <tr>
+                        <td class="label">Provinsi</td>
+                        <td class="colon">:</td>
+                        <td><input type="text" name="provinsi"></td>
+                    </tr>
+                    <tr>
+                        <td class="label">Kode Pos</td>
+                        <td class="colon">:</td>
+                        <td><input type="text" name="kodepos"></td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <fieldset>
+                <legend>Lain-lainnya</legend>
+                <table class="tbl-form">
+                    <tr>
+                        <td class="label">Bahasa Pemrograman</td>
+                        <td class="colon">:</td>
+                        <td>
+                            <div style="margin-bottom: 4px;">
+                                <span class="checkbox-group"><input type="checkbox" name="bahasa[]"> C / C++</span>
+                                <span class="checkbox-group"><input type="checkbox" name="bahasa[]"> Go Lang</span>
+                                <span class="checkbox-group"><input type="checkbox" name="bahasa[]"> Python</span>
+                                <span class="checkbox-group"><input type="checkbox" name="bahasa[]"> Lainnya</span>
+                            </div>
+                            <div>
+                                <span class="checkbox-group"><input type="checkbox" name="bahasa[]"> PHP</span>
+                                <span class="checkbox-group"><input type="checkbox" name="bahasa[]"> Javascript</span>
+                                <span class="checkbox-group"><input type="checkbox" name="bahasa[]"> Ruby</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="label" style="padding-top: 8px;">Kegiatan</td>
+                        <td class="colon" style="padding-top: 8px;">:</td>
+                        <td style="padding-top: 8px;">
+                            <div style="margin-bottom: 4px;">
+                                <span class="checkbox-group"><input type="checkbox" name="kegiatan[]"> Organisasi Kemahasiswaan</span>
+                                <span class="checkbox-group"><input type="checkbox" name="kegiatan[]"> Bidang Olahraga</span>
+                                <span class="checkbox-group"><input type="checkbox" name="kegiatan[]"> Lainnya</span>
+                            </div>
+                            <div>
+                                <span class="checkbox-group"><input type="checkbox" name="kegiatan[]"> Organisasi di Luar Kampus</span>
+                                <span class="checkbox-group"><input type="checkbox" name="kegiatan[]"> Bidang Seni</span>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <div class="buttons">
+                <input type="reset" value="Reset">
+                <input type="submit" value="Submit">
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>
